@@ -1,2 +1,2 @@
-# for-sejal
+# for-Arushie
 Friendship Day Surprise 💖
