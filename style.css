@@ -1,1 +1,1252 @@
+/* =======================================================
+   FRIENDSHIP DAY V2
+   STYLE.CSS
+   PART 1 / 4
+======================================================= */
+
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+height:100vh;
+
+overflow:hidden;
+
+color:#31445d;
+
+background:
+
+linear-gradient(
+135deg,
+#dff4ff 0%,
+#fff5fb 30%,
+#ffffff 60%,
+#eaf8ff 100%
+);
+
+}
+
+/* ========================= */
+/* ANIMATED BACKGROUND */
+/* ========================= */
+
+#gradient{
+
+position:fixed;
+
+inset:0;
+
+z-index:-20;
+
+background:
+
+radial-gradient(circle at 20% 20%,
+rgba(255,182,220,.35),
+transparent 28%),
+
+radial-gradient(circle at 80% 15%,
+rgba(135,206,255,.32),
+transparent 30%),
+
+radial-gradient(circle at 50% 85%,
+rgba(255,220,120,.18),
+transparent 38%),
+
+radial-gradient(circle at 15% 75%,
+rgba(195,160,255,.18),
+transparent 28%);
+
+animation:bgMove 15s ease-in-out infinite;
+
+}
+
+@keyframes bgMove{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* ========================= */
+/* FLOATING LAYERS */
+/* ========================= */
+
+#particles,
+#hearts,
+#stars,
+#sparkles{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:-5;
+
+}
+
+/* ========================= */
+/* SCREEN */
+/* ========================= */
+
+.screen{
+
+position:absolute;
+
+inset:0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:24px;
+
+opacity:0;
+
+pointer-events:none;
+
+transition:.7s;
+
+}
+
+.screen.active{
+
+opacity:1;
+
+pointer-events:auto;
+
+}
+
+/* ========================= */
+/* GLASS CARD */
+/* ========================= */
+
+.glass{
+
+width:100%;
+
+max-width:460px;
+
+padding:42px 30px;
+
+border-radius:32px;
+
+background:
+
+rgba(255,255,255,.42);
+
+backdrop-filter:blur(22px);
+
+border:
+
+1px solid rgba(255,255,255,.65);
+
+box-shadow:
+
+0 20px 60px rgba(255,170,205,.18),
+
+0 12px 35px rgba(130,190,255,.18);
+
+animation:floatCard 5s ease-in-out infinite;
+
+}
+
+@keyframes floatCard{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+/* ========================= */
+/* HEADINGS */
+/* ========================= */
+
+h1{
+
+font-family:'Playfair Display',serif;
+
+font-size:42px;
+
+text-align:center;
+
+color:#3c5e9a;
+
+margin-bottom:14px;
+
+}
+
+h2{
+
+font-size:30px;
+
+font-weight:700;
+
+text-align:center;
+
+color:#476cb0;
+
+margin-bottom:14px;
+
+}
+
+h3{
+
+font-size:22px;
+
+text-align:center;
+
+margin-bottom:18px;
+
+color:#ff72a8;
+
+}
+
+p{
+
+font-size:17px;
+
+line-height:31px;
+
+text-align:center;
+
+color:#56697f;
+
+}
+/* =======================================================
+   STYLE.CSS
+   PART 2 / 4
+======================================================= */
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+button{
+
+border:none;
+
+outline:none;
+
+cursor:pointer;
+
+font-family:'Poppins',sans-serif;
+
+font-size:17px;
+
+font-weight:600;
+
+padding:15px 34px;
+
+border-radius:999px;
+
+margin-top:25px;
+
+background:linear-gradient(
+135deg,
+#7dc8ff,
+#ff8fc5
+);
+
+color:#fff;
+
+box-shadow:
+
+0 10px 25px rgba(125,200,255,.35),
+
+0 10px 25px rgba(255,143,197,.30);
+
+transition:.35s;
+
+}
+
+button:hover{
+
+transform:
+
+translateY(-4px)
+scale(1.04);
+
+box-shadow:
+
+0 18px 40px rgba(125,200,255,.40),
+
+0 18px 40px rgba(255,143,197,.38);
+
+}
+
+button:active{
+
+transform:scale(.96);
+
+}
+
+.choiceButtons{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+margin-top:30px;
+
+}
+
+/* ========================= */
+/* LOADING SCREEN */
+/* ========================= */
+
+.loadingCard{
+
+text-align:center;
+
+}
+
+.loadingIcon{
+
+font-size:64px;
+
+animation:pulse 1.6s infinite;
+
+margin-bottom:18px;
+
+}
+
+.loader{
+
+margin-top:28px;
+
+width:100%;
+
+height:14px;
+
+border-radius:999px;
+
+background:#eef4fb;
+
+overflow:hidden;
+
+}
+
+.loaderBar{
+
+height:100%;
+
+width:0;
+
+border-radius:999px;
+
+background:linear-gradient(
+90deg,
+#7bc8ff,
+#ff95cb,
+#ffd982
+);
+
+animation:loadingBar 3s linear forwards;
+
+}
+
+@keyframes loadingBar{
+
+to{
+
+width:100%;
+
+}
+
+}
+
+@keyframes pulse{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.12);
+
+}
+
+}
+
+/* ========================= */
+/* ENVELOPE */
+/* ========================= */
+
+.envelopeCard{
+
+text-align:center;
+
+}
+
+.envelope{
+
+position:relative;
+
+width:250px;
+
+height:170px;
+
+margin:35px auto;
+
+cursor:pointer;
+
+transition:.5s;
+
+}
+
+.envelope:hover{
+
+transform:translateY(-8px);
+
+}
+
+.envelopeBack{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background:#ffd4e8;
+
+border-radius:18px;
+
+box-shadow:
+
+0 20px 35px rgba(0,0,0,.10);
+
+}
+
+.envelopeLetter{
+
+position:absolute;
+
+left:50%;
+
+top:22px;
+
+transform:translateX(-50%);
+
+width:180px;
+
+height:120px;
+
+background:white;
+
+border-radius:12px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:42px;
+
+transition:.45s;
+
+box-shadow:
+
+0 10px 20px rgba(0,0,0,.08);
+
+}
+
+.envelope:hover .envelopeLetter{
+
+transform:
+
+translateX(-50%)
+translateY(-18px);
+
+}
+
+.envelopeFlap{
+
+position:absolute;
+
+top:0;
+
+width:100%;
+
+height:95px;
+
+clip-path:polygon(0 0,100% 0,50% 100%);
+
+background:#ff9fcf;
+
+transform-origin:top;
+
+transition:.5s;
+
+}
+
+.envelope:hover .envelopeFlap{
+
+transform:rotateX(180deg);
+
+}
+
+/* ========================= */
+/* STORY */
+/* ========================= */
+
+.storyCard{
+
+text-align:center;
+
+}
+
+#typewriterText{
+
+min-height:170px;
+
+font-size:20px;
+
+line-height:36px;
+
+font-weight:500;
+
+white-space:pre-line;
+
+}
+
+/* ========================= */
+/* WELCOME */
+/* ========================= */
+
+.welcomeCard{
+
+text-align:center;
+
+}
+
+.questionCard,
+.smileCard{
+
+text-align:center;
+
+}
+/* =======================================================
+   STYLE.CSS
+   PART 3 / 4
+======================================================= */
+
+/* ========================= */
+/* CUTE ANIMATION */
+/* ========================= */
+
+.animationCard{
+
+text-align:center;
+
+}
+
+.cuteScene{
+
+display:flex;
+
+justify-content:space-evenly;
+
+align-items:center;
+
+margin:35px 0;
+
+}
+
+.bear{
+
+width:120px;
+
+height:145px;
+
+background:linear-gradient(
+180deg,
+#fff8fb,
+#ffd8ea
+);
+
+border-radius:60px;
+
+position:relative;
+
+box-shadow:
+
+0 12px 30px rgba(0,0,0,.08);
+
+animation:bounce 2.8s ease-in-out infinite;
+
+}
+
+.sejalBear{
+
+animation-delay:.5s;
+
+}
+
+.ear{
+
+position:absolute;
+
+width:34px;
+
+height:34px;
+
+background:#ffd8ea;
+
+border-radius:50%;
+
+top:-12px;
+
+}
+
+.ear.left{
+
+left:16px;
+
+}
+
+.ear.right{
+
+right:16px;
+
+}
+
+.face{
+
+position:absolute;
+
+left:50%;
+
+top:36px;
+
+transform:translateX(-50%);
+
+width:84px;
+
+text-align:center;
+
+}
+
+.eyes{
+
+width:12px;
+
+height:12px;
+
+background:#444;
+
+border-radius:50%;
+
+margin:0 auto;
+
+box-shadow:
+
+-18px 0 #444,
+
+18px 0 #444;
+
+}
+
+.mouth{
+
+width:28px;
+
+height:14px;
+
+border-bottom:4px solid #ff77ad;
+
+border-radius:0 0 30px 30px;
+
+margin:18px auto 10px;
+
+}
+
+.bearName{
+
+display:block;
+
+font-weight:700;
+
+color:#4c76b8;
+
+}
+
+.middleHearts{
+
+font-size:34px;
+
+animation:heartFloat 2s infinite;
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+
+@keyframes heartFloat{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.25);
+
+}
+
+}
+
+/* ========================= */
+/* LETTER */
+/* ========================= */
+
+.letterCard{
+
+text-align:center;
+
+}
+
+.letterBody{
+
+margin-top:25px;
+
+padding:28px;
+
+border-radius:22px;
+
+background:rgba(255,255,255,.58);
+
+box-shadow:inset 0 0 18px rgba(255,255,255,.45);
+
+max-height:340px;
+
+overflow:auto;
+
+}
+
+.letterBody p{
+
+font-family:'Caveat',cursive;
+
+font-size:34px;
+
+line-height:52px;
+
+color:#445a73;
+
+text-align:left;
+
+}
+
+/* ========================= */
+/* FINGERPRINT */
+/* ========================= */
+
+.fingerprintCard{
+
+text-align:center;
+
+}
+
+.scannerArea{
+
+display:flex;
+
+justify-content:center;
+
+margin:30px 0;
+
+}
+
+#fingerRing{
+
+position:relative;
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+border:4px solid #87cfff;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+}
+
+#fingerGlow{
+
+position:absolute;
+
+inset:0;
+
+border-radius:50%;
+
+background:radial-gradient(
+
+rgba(123,200,255,.35),
+
+transparent 70%
+
+);
+
+animation:pulse 2s infinite;
+
+}
+
+#fingerprint{
+
+font-size:72px;
+
+z-index:2;
+
+}
+
+#scanProgress{
+
+position:absolute;
+
+bottom:0;
+
+left:0;
+
+width:100%;
+
+height:0;
+
+background:rgba(120,255,180,.28);
+
+transition:height 3s linear;
+
+}
+
+#scanText{
+
+font-weight:600;
+
+color:#5d79a5;
+
+}
+/* =======================================================
+   STYLE.CSS
+   PART 4 / 4
+======================================================= */
+
+/* ========================= */
+/* CERTIFICATE */
+/* ========================= */
+
+.certificate{
+
+max-width:700px;
+
+width:100%;
+
+margin:auto;
+
+padding:18px;
+
+}
+
+.certificateBorder{
+
+position:relative;
+
+background:#fffdfb;
+
+border:10px solid #f5d38b;
+
+border-radius:26px;
+
+padding:45px 35px;
+
+box-shadow:
+
+0 25px 60px rgba(0,0,0,.15);
+
+}
+
+.goldTitle{
+
+color:#d5a438;
+
+font-size:44px;
+
+margin:20px 0;
+
+}
+
+.certificateSeal{
+
+width:170px;
+
+height:170px;
+
+margin:30px auto;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+font-weight:700;
+
+color:#fff;
+
+background:linear-gradient(
+135deg,
+#ff7dbb,
+#7dc8ff
+);
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.18);
+
+}
+
+.certificateSignatures{
+
+display:flex;
+
+justify-content:space-between;
+
+margin:35px 0;
+
+text-align:center;
+
+font-size:16px;
+
+}
+
+#approvedStamp{
+
+position:absolute;
+
+top:25px;
+
+right:25px;
+
+padding:12px 18px;
+
+border:4px solid #ff4d6d;
+
+color:#ff4d6d;
+
+font-weight:700;
+
+font-size:20px;
+
+transform:rotate(-15deg);
+
+border-radius:10px;
+
+opacity:.8;
+
+}
+
+.certificateTerms{
+
+margin-top:30px;
+
+text-align:left;
+
+}
+
+.certificateTerms h4{
+
+margin-bottom:12px;
+
+color:#4b70b4;
+
+}
+
+.certificateTerms ul{
+
+padding-left:22px;
+
+line-height:32px;
+
+}
+
+/* ========================= */
+/* FINAL SCREEN */
+/* ========================= */
+
+.endingCard,
+.finalCard{
+
+text-align:center;
+
+}
+
+#endingTypewriter{
+
+min-height:180px;
+
+font-size:21px;
+
+line-height:38px;
+
+white-space:pre-line;
+
+}
+
+/* ========================= */
+/* MUSIC BUTTON */
+/* ========================= */
+
+#musicBtn{
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+width:65px;
+
+height:65px;
+
+padding:0;
+
+border-radius:50%;
+
+font-size:24px;
+
+z-index:999;
+
+}
+
+/* ========================= */
+/* TOAST */
+/* ========================= */
+
+#toast{
+
+position:fixed;
+
+left:50%;
+
+bottom:100px;
+
+transform:translateX(-50%);
+
+padding:14px 24px;
+
+border-radius:50px;
+
+background:rgba(255,255,255,.88);
+
+backdrop-filter:blur(15px);
+
+color:#4f6791;
+
+font-weight:600;
+
+opacity:0;
+
+transition:.35s;
+
+pointer-events:none;
+
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.12);
+
+}
+
+#toast.show{
+
+opacity:1;
+
+}
+
+/* ========================= */
+/* CONFETTI CANVAS */
+/* ========================= */
+
+#confettiCanvas{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+z-index:9999;
+
+}
+
+/* ========================= */
+/* SCROLLBAR */
+/* ========================= */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#9ecfff;
+
+border-radius:999px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#eef7ff;
+
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:768px){
+
+.glass{
+
+padding:30px 22px;
+
+}
+
+h1{
+
+font-size:34px;
+
+}
+
+h2{
+
+font-size:26px;
+
+}
+
+p{
+
+font-size:16px;
+
+line-height:28px;
+
+}
+
+.cuteScene{
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.certificateBorder{
+
+padding:30px 20px;
+
+}
+
+.goldTitle{
+
+font-size:34px;
+
+}
+
+.certificateSignatures{
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+}
 
