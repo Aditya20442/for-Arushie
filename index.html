@@ -5,57 +5,45 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>
-💙 A Little Surprise For Sejal
-</title>
+<title>Happy Friendship Day 💖</title>
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=Caveat:wght@700&display=swap"
-rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- =============================== -->
+<!-- ========================= -->
 <!-- BACKGROUND -->
-<!-- =============================== -->
+<!-- ========================= -->
 
-<div id="gradient"></div>
+<div id="bgGradient"></div>
 
-<div id="particles"></div>
-
-<div id="hearts"></div>
-
-<div id="stars"></div>
+<div id="floatingHearts"></div>
 
 <div id="sparkles"></div>
 
-<!-- =============================== -->
+<div id="petals"></div>
+
+<!-- ========================= -->
 <!-- LOADING SCREEN -->
-<!-- =============================== -->
+<!-- ========================= -->
 
-<section
-id="loadingScreen"
-class="screen active">
+<section id="loadingScreen" class="screen active">
 
-<div class="glass loadingCard">
+<div class="card loadingCard">
 
-<div class="loadingIcon">
+<div class="logo">
 
-💙✨
+💖
 
 </div>
 
@@ -67,15 +55,13 @@ Preparing Something Special...
 
 <p>
 
-Please wait a moment...
+Just a few seconds... ✨
 
 </p>
 
 <div class="loader">
 
-<div class="loaderBar">
-
-</div>
+<div class="loaderFill"></div>
 
 </div>
 
@@ -83,57 +69,43 @@ Please wait a moment...
 
 </section>
 
-<!-- =============================== -->
+<!-- ========================= -->
 <!-- ENVELOPE -->
-<!-- =============================== -->
+<!-- ========================= -->
 
-<section
-id="envelopeScreen"
-class="screen">
+<section id="envelopeScreen" class="screen">
 
-<div class="glass envelopeCard">
+<div class="card envelopeCard">
 
 <h2>
 
-Someone sent you something...
-
-💌
+Someone sent you a surprise 💌
 
 </h2>
 
-<div
-class="envelope">
+<div id="envelope" class="envelope">
 
-<div
-class="envelopeBack">
+<div class="envelopeBack"></div>
 
-</div>
+<div class="letterInside">
 
-<div
-class="envelopeLetter">
-
-💙
+🌸
 
 </div>
 
-<div
-class="envelopeFlap">
-
-</div>
+<div class="envelopeFlap"></div>
 
 </div>
 
 <p>
 
-Tap the envelope
-to open your surprise.
+Tap below to open it.
 
 </p>
 
-<button
-id="openEnvelope">
+<button id="openEnvelope">
 
-Open Letter ✨
+Open 💖
 
 </button>
 
@@ -141,15 +113,13 @@ Open Letter ✨
 
 </section>
 
-<!-- =============================== -->
+<!-- ========================= -->
 <!-- WELCOME -->
-<!-- =============================== -->
+<!-- ========================= -->
 
-<section
-id="welcomeScreen"
-class="screen">
+<section id="welcomeScreen" class="screen">
 
-<div class="glass welcomeCard">
+<div class="card">
 
 <h1>
 
@@ -157,28 +127,25 @@ Hi Sejal 🌸
 
 </h1>
 
-<h3>
+<p>
 
 Happy Friendship Day ❤️
 
-</h3>
+</p>
 
 <p>
 
-Today isn't just another day.
+I wanted to make something
+a little different...
 
-I wanted to make
-something different...
-
-Something made
-especially for you.
+Something made especially
+for you.
 
 </p>
 
-<button
-id="welcomeNext">
+<button id="welcomeNext">
 
-Continue 💙
+Continue ✨
 
 </button>
 
@@ -186,44 +153,33 @@ Continue 💙
 
 </section>
 
-<!-- =============================== -->
+<!-- ========================= -->
 <!-- FIRST QUESTION -->
-<!-- =============================== -->
+<!-- ========================= -->
 
-<section
-id="introQuestion"
-class="screen">
+<section id="questionScreen" class="screen">
 
-<div class="glass questionCard">
+<div class="card">
 
 <h2>
 
-Before We Continue...
+Can I ask you something?
 
 😊
 
 </h2>
 
-<p>
+<div class="buttonGroup">
 
-Can I ask you
-something first?
+<button id="questionYes">
 
-</p>
-
-<div class="choiceButtons">
-
-<button
-id="askYes">
-
-Of Course ❤️
+Of Course 💕
 
 </button>
 
-<button
-id="askAlso">
+<button id="questionAlso">
 
-Yesss 😄
+Yess 😄
 
 </button>
 
@@ -233,43 +189,33 @@ Yesss 😄
 
 </section>
 
-<!-- =============================== -->
+<!-- ========================= -->
 <!-- SMILE QUESTION -->
-<!-- =============================== -->
+<!-- ========================= -->
 
-<section
-id="smileScreen"
-class="screen">
+<section id="smileScreen" class="screen">
 
-<div class="glass smileCard">
+<div class="card">
 
 <h2>
-
-One More Thing...
-
-🌸
-
-</h2>
-
-<p>
 
 Are you smiling?
 
-</p>
+🥹
 
-<div class="choiceButtons">
+</h2>
 
-<button
-id="smileYes">
+<div class="buttonGroup">
 
-Yes 😊
+<button id="smileYes">
+
+Yes ❤️
 
 </button>
 
-<button
-id="smileNo">
+<button id="smileNo">
 
-Not Yet 🙈
+Not Yet 😂
 
 </button>
 
@@ -278,29 +224,152 @@ Not Yet 🙈
 </div>
 
 </section>
-  <!-- =============================== -->
-<!-- TYPEWRITER STORY -->
-<!-- =============================== -->
+<!DOCTYPE html>
+<html lang="en">
 
-<section
-id="storyScreen"
-class="screen">
+<head>
 
-<div class="glass storyCard">
+<meta charset="UTF-8">
 
-<h2>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-Just Read This... 💙
+<title>Happy Friendship Day 💖</title>
 
-</h2>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-<p
-id="typewriterText">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- BACKGROUND -->
+<!-- ========================= -->
+
+<div id="bgGradient"></div>
+
+<div id="floatingHearts"></div>
+
+<div id="sparkles"></div>
+
+<div id="petals"></div>
+
+<!-- ========================= -->
+<!-- LOADING SCREEN -->
+<!-- ========================= -->
+
+<section id="loadingScreen" class="screen active">
+
+<div class="card loadingCard">
+
+<div class="logo">
+
+💖
+
+</div>
+
+<h1>
+
+Preparing Something Special...
+
+</h1>
+
+<p>
+
+Just a few seconds... ✨
 
 </p>
 
-<button
-id="storyNext">
+<div class="loader">
+
+<div class="loaderFill"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- ENVELOPE -->
+<!-- ========================= -->
+
+<section id="envelopeScreen" class="screen">
+
+<div class="card envelopeCard">
+
+<h2>
+
+Someone sent you a surprise 💌
+
+</h2>
+
+<div id="envelope" class="envelope">
+
+<div class="envelopeBack"></div>
+
+<div class="letterInside">
+
+🌸
+
+</div>
+
+<div class="envelopeFlap"></div>
+
+</div>
+
+<p>
+
+Tap below to open it.
+
+</p>
+
+<button id="openEnvelope">
+
+Open 💖
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- WELCOME -->
+<!-- ========================= -->
+
+<section id="welcomeScreen" class="screen">
+
+<div class="card">
+
+<h1>
+
+Hi Sejal 🌸
+
+</h1>
+
+<p>
+
+Happy Friendship Day ❤️
+
+</p>
+
+<p>
+
+I wanted to make something
+a little different...
+
+Something made especially
+for you.
+
+</p>
+
+<button id="welcomeNext">
 
 Continue ✨
 
@@ -310,137 +379,110 @@ Continue ✨
 
 </section>
 
-<!-- =============================== -->
-<!-- CUTE ANIMATION -->
-<!-- =============================== -->
+<!-- ========================= -->
+<!-- FIRST QUESTION -->
+<!-- ========================= -->
 
-<section
-id="animationScreen"
-class="screen">
+<section id="questionScreen" class="screen">
 
-<div class="glass animationCard">
+<div class="card">
 
 <h2>
 
-This Made Me Think Of Us 💙
+Can I ask you something?
+
+😊
 
 </h2>
 
-<div
-class="cuteScene">
+<div class="buttonGroup">
 
-<div
-class="bear yashBear">
+<button id="questionYes">
 
-<div class="ear left"></div>
+Of Course 💕
 
-<div class="ear right"></div>
+</button>
 
-<div class="face">
+<button id="questionAlso">
 
-<div class="eyes"></div>
-
-<div class="mouth"></div>
-
-<span class="bearName">
-
-Yash
-
-</span>
-
-</div>
-
-</div>
-
-<div
-class="middleHearts">
-
-💙 💖 ✨
-
-</div>
-
-<div
-class="bear sejalBear">
-
-<div class="ear left"></div>
-
-<div class="ear right"></div>
-
-<div class="face">
-
-<div class="eyes"></div>
-
-<div class="mouth"></div>
-
-<span class="bearName">
-
-Sejal
-
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-<p
-id="animationText">
-
-Watch carefully... 😊
-
-</p>
-
-<button
-id="animationNext">
-
-Awww 🥹
+Yess 😄
 
 </button>
 
 </div>
 
+</div>
+
 </section>
 
-<!-- =============================== -->
-<!-- BEST FRIEND QUESTION -->
-<!-- =============================== -->
+<!-- ========================= -->
+<!-- SMILE QUESTION -->
+<!-- ========================= -->
 
-<section
-id="bestFriendScreen"
-class="screen">
+<section id="smileScreen" class="screen">
 
-<div class="glass bestFriendCard">
+<div class="card">
 
 <h2>
 
-Now...
+Are you smiling?
 
-The Real Question 💙
+🥹
+
+</h2>
+
+<div class="buttonGroup">
+
+<button id="smileYes">
+
+Yes ❤️
+
+</button>
+
+<button id="smileNo">
+
+Not Yet 😂
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- APPRECIATION QUESTION -->
+<!-- ========================= -->
+
+<section id="appreciationScreen" class="screen">
+
+<div class="card">
+
+<h2>
+
+Wait... 💕
 
 </h2>
 
 <p>
 
-Will you always
-be my best friend?
+Do you know
+how much
+I appreciate you?
 
 </p>
 
-<div
-class="choiceButtons">
+<div class="buttonGroup">
 
-<button
-id="yesForever">
+<button id="appYes">
 
-Forever ❤️
+A Lot ❤️
 
 </button>
 
-<button
-id="noForever">
+<button id="appNo">
 
-No 🙈
+Just A Little 😂
 
 </button>
 
@@ -450,382 +492,172 @@ No 🙈
 
 </section>
 
-<!-- =============================== -->
-<!-- FRIENDSHIP LETTER -->
-<!-- =============================== -->
+<!-- ========================= -->
+<!-- FINGERPRINT SCANNER -->
+<!-- ========================= -->
 
-<section
-id="letterScreen"
-class="screen">
+<section id="fingerScreen" class="screen">
 
-<div class="glass letterCard">
+<div class="card">
 
 <h2>
 
-💌 A Letter For You
-
-</h2>
-
-<div
-class="letterBody">
-
-<p>
-
-Dear Sejal,
-
-Thank you for every smile,
-every laugh,
-every random conversation,
-and every little memory.
-
-You are genuinely
-one of the nicest people
-I've ever met.
-
-I hope,
-no matter where life takes us,
-
-our friendship
-always stays the same.
-
-Happy Friendship Day.
-
-❤️
-
-— Yash
-
-</p>
-
-</div>
-
-<button
-id="letterNext">
-
-Continue 🌸
-
-</button>
-
-</div>
-
-</section>
-  <!-- =============================== -->
-<!-- TYPEWRITER STORY -->
-<!-- =============================== -->
-
-<section
-id="storyScreen"
-class="screen">
-
-<div class="glass storyCard">
-
-<h2>
-
-Just Read This... 💙
-
-</h2>
-
-<p
-id="typewriterText">
-
-</p>
-
-<button
-id="storyNext">
-
-Continue ✨
-
-</button>
-
-</div>
-
-</section>
-
-<!-- =============================== -->
-<!-- CUTE ANIMATION -->
-<!-- =============================== -->
-
-<section
-id="animationScreen"
-class="screen">
-
-<div class="glass animationCard">
-
-<h2>
-
-This Made Me Think Of Us 💙
-
-</h2>
-
-<div
-class="cuteScene">
-
-<div
-class="bear yashBear">
-
-<div class="ear left"></div>
-
-<div class="ear right"></div>
-
-<div class="face">
-
-<div class="eyes"></div>
-
-<div class="mouth"></div>
-
-<span class="bearName">
-
-Yash
-
-</span>
-
-</div>
-
-</div>
-
-<div
-class="middleHearts">
-
-💙 💖 ✨
-
-</div>
-
-<div
-class="bear sejalBear">
-
-<div class="ear left"></div>
-
-<div class="ear right"></div>
-
-<div class="face">
-
-<div class="eyes"></div>
-
-<div class="mouth"></div>
-
-<span class="bearName">
-
-Sejal
-
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-<p
-id="animationText">
-
-Watch carefully... 😊
-
-</p>
-
-<button
-id="animationNext">
-
-Awww 🥹
-
-</button>
-
-</div>
-
-</section>
-
-<!-- =============================== -->
-<!-- BEST FRIEND QUESTION -->
-<!-- =============================== -->
-
-<section
-id="bestFriendScreen"
-class="screen">
-
-<div class="glass bestFriendCard">
-
-<h2>
-
-Now...
-
-The Real Question 💙
+Official Friendship Verification 💖
 
 </h2>
 
 <p>
 
-Will you always
-be my best friend?
+Touch and hold the fingerprint
+for 3 seconds.
 
 </p>
 
-<div
-class="choiceButtons">
+<div id="scanner">
 
-<button
-id="yesForever">
+<div id="scannerGlow"></div>
 
-Forever ❤️
+<div id="fingerprint">
 
-</button>
-
-<button
-id="noForever">
-
-No 🙈
-
-</button>
+🖐️
 
 </div>
+
+<div id="scanFill"></div>
+
+</div>
+
+<p id="scanStatus">
+
+Waiting for fingerprint...
+
+</p>
 
 </div>
 
 </section>
 
-<!-- =============================== -->
-<!-- FRIENDSHIP LETTER -->
-<!-- =============================== -->
+<!-- ========================= -->
+<!-- CERTIFICATE LOADING -->
+<!-- ========================= -->
 
-<section
-id="letterScreen"
-class="screen">
+<section id="certificateLoading" class="screen">
 
-<div class="glass letterCard">
+<div class="card">
 
 <h2>
 
-💌 A Letter For You
+Creating Your Friendship Certificate...
+
+🏆
 
 </h2>
 
-<div
-class="letterBody">
+<div class="progressBar">
+
+<div id="progressFill"></div>
+
+</div>
+
+<div class="loadingSteps">
 
 <p>
 
-Dear Sejal,
+⏳ Checking Friendship...
 
-Thank you for every smile,
-every laugh,
-every random conversation,
-and every little memory.
+</p>
 
-You are genuinely
-one of the nicest people
-I've ever met.
+<p>
 
-I hope,
-no matter where life takes us,
+⏳ Loading Memories...
 
-our friendship
-always stays the same.
+</p>
 
-Happy Friendship Day.
+<p>
 
-❤️
+⏳ Verifying Trust...
 
-— Yash
+</p>
+
+<p>
+
+⏳ Finalizing...
 
 </p>
 
 </div>
 
-<button
-id="letterNext">
-
-Continue 🌸
-
-</button>
-
 </div>
 
 </section>
-  <div
-class="certificateSignatures">
 
-<div>
+<!-- ========================= -->
+<!-- CERTIFICATE -->
+<!-- ========================= -->
 
-Signed By
+<section id="certificateScreen" class="screen">
 
-<br>
+<div class="certificate">
 
-<b>
+<div class="certificateBorder">
 
-Sejal ❤️
+<h3>
 
-</b>
+🏆 OFFICIAL CERTIFICATE 🏆
 
-</div>
+</h3>
 
-<div>
+<h1>
 
-Created By
+Lifetime Friendship
 
-<br>
+</h1>
 
-<b>
+<p>
 
-Yash 💙
+This proudly certifies that
 
-</b>
+</p>
 
-</div>
+<h2>
 
-</div>
+🌸 SEJAL 🌸
 
-<div
-id="approvedStamp">
+</h2>
+
+<p>
+
+has officially accepted
+
+</p>
+
+<h2>
+
+💖 YASH 💖
+
+</h2>
+
+<p>
+
+as her
+
+</p>
+
+<h1 class="goldText">
+
+BEST FRIEND
+
+FOREVER
+
+</h1>
+
+<div class="seal">
 
 APPROVED
 
 </div>
 
-<div
-class="certificateTerms">
-
-<h4>
-
-Friendship Terms & Conditions
-
-</h4>
-
-<ul>
-
-<li>
-
-💙 Reply to reels whenever possible.
-
-</li>
-
-<li>
-
-😂 Laugh at bad jokes.
-
-</li>
-
-<li>
-
-🤝 Always support each other.
-
-</li>
-
-<li>
-
-🌸 Make more memories together.
-
-</li>
-
-<li>
-
-❤️ Valid Until:
-<b>Forever.</b>
-
-</li>
-
-</ul>
-
-</div>
-
-<button
-id="certificateNext">
+<button id="certificateNext">
 
 One Last Message 💌
 
@@ -836,31 +668,25 @@ One Last Message 💌
 </div>
 
 </section>
-
-<!-- =============================== -->
+<!-- ========================= -->
 <!-- FINAL MESSAGE -->
-<!-- =============================== -->
+<!-- ========================= -->
 
-<section
-id="endingScreen"
-class="screen">
+<section id="endingScreen" class="screen">
 
-<div
-class="glass endingCard">
+<div class="card endingCard">
 
 <h1>
 
-🌌
+✨ Happy Friendship Day ✨
 
 </h1>
 
-<p
-id="endingTypewriter">
+<p id="endingMessage">
 
 </p>
 
-<button
-id="celebrateBtn">
+<button id="celebrateBtn">
 
 Celebrate 🎉
 
@@ -870,50 +696,35 @@ Celebrate 🎉
 
 </section>
 
-<!-- =============================== -->
+<!-- ========================= -->
 <!-- GRAND FINALE -->
-<!-- =============================== -->
+<!-- ========================= -->
 
-<section
-id="finalScreen"
-class="screen">
+<section id="finalScreen" class="screen">
 
-<div
-class="glass finalCard">
+<div class="card finalCard">
 
 <h1>
 
-🎆 Happy Friendship Day 🎆
+💖 Thank You, Sejal 💖
 
 </h1>
 
-<h2>
-
-Sejal ❤️
-
-</h2>
-
 <p>
 
-Thank you for taking this
-little journey with me.
+Thank you for taking this little journey with me.
 
-I hope this made you smile.
+I hope this brought a smile to your face and reminded you how much your friendship means to me.
 
-You truly are
-an amazing friend.
+No matter where life takes us...
 
-💙🌸✨
+I hope we stay best friends forever. 🌸
 
 </p>
 
 <h3>
 
-Made with ❤️
-
-by
-
-Yash
+Made with ❤️ by Yash
 
 </h3>
 
@@ -921,49 +732,43 @@ Yash
 
 </section>
 
-<!-- =============================== -->
-<!-- MUSIC -->
-<!-- =============================== -->
+<!-- ========================= -->
+<!-- MUSIC BUTTON -->
+<!-- ========================= -->
 
-<button
-id="musicBtn">
+<button id="musicButton">
 
 🎵
 
 </button>
 
-<audio
-id="bgMusic"
-loop>
+<audio id="backgroundMusic" loop>
 
-<source
-src="music.mp3"
-type="audio/mpeg">
+<source src="music.mp3" type="audio/mpeg">
 
 </audio>
 
-<!-- =============================== -->
-<!-- EFFECTS -->
-<!-- =============================== -->
+<!-- ========================= -->
+<!-- TOAST -->
+<!-- ========================= -->
 
-<canvas
-id="confettiCanvas">
-
-</canvas>
-
-<div
-id="toast">
+<div id="toast">
 
 </div>
+
+<!-- ========================= -->
+<!-- CONFETTI -->
+<!-- ========================= -->
+
+<canvas id="confettiCanvas">
+
+</canvas>
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
-<script
-src="script.js">
-
-</script>
+<script src="script.js"></script>
 
 </body>
 
