@@ -1,264 +1,758 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>💖 Happy Friendship Day, Sejal!</title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>
+💙 A Little Surprise For Sejal
+</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="style.css">
+
 </head>
 
 <body>
 
-<!-- Floating Effects -->
+<!-- Background -->
+
+<div class="bgGradient"></div>
+
+<div id="stars"></div>
+
 <div id="hearts"></div>
-<div id="petals"></div>
+
+<div id="sparkles"></div>
+
+<!-- ========================= -->
 
 <!-- Loading Screen -->
-<div id="loadingScreen" class="screen active">
 
-    <div class="loaderCard">
+<!-- ========================= -->
 
-        <h1>💌</h1>
+<section
+id="loadingScreen"
+class="screen active">
 
-        <h2>Someone made something special...</h2>
+<div class="glass loadingCard">
 
-        <div class="loadingBar">
-            <div class="loadingFill"></div>
-        </div>
-
-        <p>Loading your surprise...</p>
-
-    </div>
-
-</div>
-
-<!-- Envelope Screen -->
-<div id="envelopeScreen" class="screen">
-
-    <div class="envelopeContainer">
-
-        <div class="envelope">
-
-            <div class="letterPreview">
-                💖
-            </div>
-
-        </div>
-
-        <h2>Tap the envelope</h2>
-
-        <p>Your Friendship Day surprise is waiting...</p>
-
-        <button id="openEnvelope">
-            Open 💌
-        </button>
-
-    </div>
-
-</div>
-<!-- Main Welcome Screen -->
-<div id="welcomeScreen" class="screen">
-
-    <div class="card">
-
-        <div class="emoji">
-            🌸
-        </div>
-
-        <h1>
-            Hey Sejal...
-        </h1>
-
-        <p class="subtitle">
-            Happy Friendship Day ❤️
-        </p>
-
-        <p class="message">
-            I wanted to make something different instead of sending
-            just another text message...
-            <br><br>
-            So I made this little surprise only for you. ✨
-        </p>
-
-        <button id="startJourney">
-            Start Journey 🌷
-        </button>
-
-    </div>
-
-</div>
-
-<!-- Typewriter Screen -->
-<div id="typeScreen" class="screen">
-
-    <div class="card">
-
-        <h2>
-            Before we continue...
-        </h2>
-
-        <p id="typingText"></p>
-
-        <button id="continueBtn">
-            Continue ❤️
-        </button>
-
-    </div>
-
-</div>
-
-<!-- Question Screen -->
-<div id="questionScreen" class="screen">
-
-    <div class="card">
-
-        <h2>
-            One Question 😄
-        </h2>
-
-        <p>
-            Will you always remain my best friend?
-        </p>
-
-        <div class="buttons">
-
-            <button id="yesBtn">
-                Yes ❤️
-            </button>
-
-            <button id="noBtn">
-                No 🙈
-            </button>
-
-        </div>
-
-    </div>
-
-</div>
-
-<!-- Letter Screen -->
-<div id="letterScreen" class="screen">
-
-    <div class="letter">
-
-        <h2>
-            💌 A Letter For You
-        </h2>
-
-        <div class="letterContent">
-
-            <p>
-
-Dear Sejal,
-
-Happy Friendship Day ❤️
-
-Thank you for being such an amazing friend.
-
-Even if we don't meet every day,
-I'm really grateful that you're a part of my life.
-
-I hope you keep smiling,
-keep achieving everything you dream of,
-and never change the wonderful person you are.
-
-No matter what happens,
-our friendship will always stay special.
+<h1>
 
 ✨
 
-— Yash
+</h1>
 
-            </p>
+<h2>
 
-        </div>
+Preparing Something Special...
 
-        <button id="finalBtn">
-            One Last Thing 🌸
-        </button>
+</h2>
 
-    </div>
+<div class="loader">
 
-</div>
-<!-- Final Screen -->
-<div id="finalScreen" class="screen">
-
-    <div class="card finalCard">
-
-        <div class="emoji">
-            🥹💖
-        </div>
-
-        <h1>
-            Happy Friendship Day, Sejal!
-        </h1>
-
-        <p class="message">
-
-            I don't know what the future holds...
-
-            <br><br>
-
-            But I'm really happy that our paths crossed.
-
-            <br><br>
-
-            Thanks for all the laughs,
-            the memories,
-            and for simply being you.
-
-            <br><br>
-
-            Stay happy.
-            Stay crazy.
-            Stay awesome.
-
-            🌸❤️🌸
-
-        </p>
-
-        <h2 class="signature">
-            — Your Friend,
-            <br>
-            <span>Yash ❤️</span>
-        </h2>
-
-        <button id="celebrateBtn">
-            Celebrate 🎉
-        </button>
-
-    </div>
+<div class="loaderFill">
 
 </div>
 
-<!-- Music Button -->
-<button id="musicBtn" title="Music">
-    🎵
+</div>
+
+<p>
+
+Just a few seconds...
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<!-- Envelope -->
+
+<!-- ========================= -->
+
+<section
+id="envelopeScreen"
+class="screen">
+
+<div class="glass envelopeCard">
+
+<h1>
+
+💌
+
+</h1>
+
+<h2>
+
+A Letter Has Arrived
+
+</h2>
+
+<p>
+
+Someone spent time making this
+just for you.
+
+</p>
+
+<div
+class="envelope">
+
+<div
+class="letterTop">
+
+💙
+
+</div>
+
+</div>
+
+<button
+id="openEnvelope">
+
+Open Letter
+
 </button>
 
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<!-- Welcome -->
+
+<!-- ========================= -->
+
+<section
+id="welcomeScreen"
+class="screen">
+
+<div class="glass mainCard">
+
+<h1>
+
+Hi Sejal 🌸
+
+</h1>
+
+<h3>
+
+Happy Friendship Day
+
+</h3>
+
+<p>
+
+I could've just sent
+a normal message...
+
+But I wanted to make
+something you'll remember.
+
+</p>
+
+<button
+id="beginJourney">
+
+Start Journey ✨
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<!-- Typewriter -->
+
+<!-- ========================= -->
+
+<section
+id="storyScreen"
+class="screen">
+
+<div class="glass storyCard">
+
+<h2>
+
+Just Read This...
+
+</h2>
+
+<p
+id="typewriter">
+
+</p>
+
+<button
+id="nextStory">
+
+Continue ❤️
+
+</button>
+
+</div>
+
+</section>
+<!-- ========================= -->
+
+<!-- Cartoon Animation -->
+
+<!-- ========================= -->
+
+<section
+id="cartoonScreen"
+class="screen">
+
+<div class="glass cartoonCard">
+
+<h2>
+
+A Little Friendship Moment 💙
+
+</h2>
+
+<p>
+
+This is us... 😂❤️
+
+</p>
+
+<div class="friendsScene">
+
+<div class="friend yash">
+
+<div class="head">
+
+<span class="name">
+
+Yash
+
+</span>
+
+</div>
+
+<div class="body"></div>
+
+</div>
+
+<div class="heartsBetween">
+
+💙 ✨ 💛
+
+</div>
+
+<div class="friend sejal">
+
+<div class="head">
+
+<span class="name">
+
+Sejal
+
+</span>
+
+</div>
+
+<div class="body"></div>
+
+</div>
+
+</div>
+
+<p class="sceneText">
+
+Sometimes a hug says
+more than a thousand words.
+
+</p>
+
+<button
+id="sceneNext">
+
+Awww 🥹
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<!-- Question -->
+
+<!-- ========================= -->
+
+<section
+id="questionScreen"
+class="screen">
+
+<div class="glass questionCard">
+
+<h2>
+
+Can I Ask You One Question?
+
+🥹
+
+</h2>
+
+<p>
+
+Will you always
+be my best friend?
+
+</p>
+
+<div class="questionButtons">
+
+<button
+id="yesBtn">
+
+Forever 💙
+
+</button>
+
+<button
+id="noBtn">
+
+No 🙈
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<!-- Friendship Letter -->
+
+<!-- ========================= -->
+
+<section
+id="letterScreen"
+class="screen">
+
+<div class="glass letterCard">
+
+<h2>
+
+💌 Dear Sejal
+
+</h2>
+
+<div
+class="letterContent">
+
+<p>
+
+Thank you for being
+such an amazing friend.
+
+For every laugh...
+
+Every conversation...
+
+Every memory...
+
+I honestly appreciate
+having you in my life.
+
+No matter how busy life gets,
+
+I hope we stay friends
+for a very, very long time.
+
+Happy Friendship Day.
+
+❤️
+
+— Yash
+
+</p>
+
+</div>
+
+<button
+id="letterNext">
+
+One Last Thing...
+
+</button>
+
+</div>
+
+</section>
+<!-- ========================= -->
+
+<!-- Fingerprint Screen -->
+
+<!-- ========================= -->
+
+<section
+id="fingerprintScreen"
+class="screen">
+
+<div class="glass fingerprintCard">
+
+<h2>
+
+One Final Question...
+
+💙
+
+</h2>
+
+<p>
+
+If you accept...
+
+our friendship becomes
+official forever.
+
+</p>
+
+<div
+class="fingerContainer">
+
+<div
+id="fingerprint">
+
+🖐️
+
+<div
+id="fingerProgress">
+
+</div>
+
+</div>
+
+</div>
+
+<p
+id="holdText">
+
+Touch & Hold
+for 3 seconds
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<!-- Certificate -->
+
+<!-- ========================= -->
+
+<section
+id="certificateScreen"
+class="screen">
+
+<div class="certificate">
+
+<div class="certificateBorder">
+
+<h3>
+
+🏆 OFFICIAL CERTIFICATE 🏆
+
+</h3>
+
+<h1>
+
+CERTIFIED
+
+BEST FRIENDS
+
+</h1>
+
+<p>
+
+This certificate proudly confirms that
+
+</p>
+
+<h2>
+
+🌸 SEJAL 🌸
+
+</h2>
+
+<p>
+
+has officially accepted
+
+</p>
+
+<h2>
+
+💙 YASH 💙
+
+</h2>
+
+<p>
+
+as her
+
+</p>
+
+<h1 class="gold">
+
+BEST FRIEND
+
+FOREVER
+
+</h1>
+
+<div class="signatures">
+
+<div>
+
+Signed
+
+<br>
+
+<b>Sejal ❤️</b>
+
+</div>
+
+<div>
+
+Issued By
+
+<br>
+
+<b>Yash 💙</b>
+
+</div>
+
+</div>
+
+<div class="stamp">
+
+APPROVED
+
+</div>
+
+<div class="terms">
+
+<h4>
+
+Terms & Conditions
+
+</h4>
+
+<ul>
+
+<li>
+
+Reply to reels when possible 😂
+
+</li>
+
+<li>
+
+Laugh at bad jokes.
+
+</li>
+
+<li>
+
+No ghosting allowed.
+
+</li>
+
+<li>
+
+Friendship expires:
+
+<b>Never.</b>
+
+</li>
+
+</ul>
+
+</div>
+
+<button
+id="finishBtn">
+
+Celebrate 🎉
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<!-- Finale -->
+
+<!-- ========================= -->
+
+<section
+id="finalScreen"
+class="screen">
+
+<div class="glass finalCard">
+
+<h1>
+
+🎆
+
+</h1>
+
+<h2>
+
+Happy Friendship Day,
+
+Sejal!
+
+</h2>
+
+<p>
+
+Thank you for becoming
+an important part
+of my life.
+
+I hope this little surprise
+made you smile.
+
+😊💙
+
+</p>
+
+<h3>
+
+Forever Friends.
+
+🤝
+
+</h3>
+
+</div>
+
+</section>
+<!-- ========================= -->
+
+<!-- Floating Music Button -->
+
+<!-- ========================= -->
+
+<button
+id="musicBtn"
+title="Music">
+
+🎵
+
+</button>
+
+<!-- ========================= -->
+
 <!-- Background Music -->
-<audio id="bgMusic" loop>
-    <source src="music.mp3" type="audio/mpeg">
+
+<!-- ========================= -->
+
+<audio
+id="bgMusic"
+loop>
+
+<source
+src="music.mp3"
+type="audio/mpeg">
+
 </audio>
 
+<!-- ========================= -->
+
 <!-- Confetti Canvas -->
-<canvas id="confettiCanvas"></canvas>
+
+<!-- ========================= -->
+
+<canvas
+id="confettiCanvas">
+
+</canvas>
+
+<!-- ========================= -->
+
+<!-- Fireworks Layer -->
+
+<!-- ========================= -->
+
+<div
+id="fireworks">
+
+</div>
+
+<!-- ========================= -->
+
+<!-- Floating Notification -->
+
+<!-- ========================= -->
+
+<div
+id="toast">
+
+</div>
+
+<!-- ========================= -->
 
 <!-- GSAP -->
+
+<!-- ========================= -->
+
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
+<!-- ========================= -->
+
 <!-- Canvas Confetti -->
+
+<!-- ========================= -->
+
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
-<!-- Main Script -->
-<script src="script.js"></script>
+<!-- ========================= -->
+
+<!-- Main JavaScript -->
+
+<!-- ========================= -->
+
+<script
+src="script.js">
+
+</script>
 
 </body>
+
 </html>
