@@ -16,41 +16,248 @@
 
 <body>
 
-<div class="background"></div>
-
+<!-- Floating Effects -->
 <div id="hearts"></div>
 <div id="petals"></div>
 
-<div class="container">
+<!-- Loading Screen -->
+<div id="loadingScreen" class="screen active">
+
+    <div class="loaderCard">
+
+        <h1>💌</h1>
+
+        <h2>Someone made something special...</h2>
+
+        <div class="loadingBar">
+            <div class="loadingFill"></div>
+        </div>
+
+        <p>Loading your surprise...</p>
+
+    </div>
+
+</div>
+
+<!-- Envelope Screen -->
+<div id="envelopeScreen" class="screen">
+
+    <div class="envelopeContainer">
+
+        <div class="envelope">
+
+            <div class="letterPreview">
+                💖
+            </div>
+
+        </div>
+
+        <h2>Tap the envelope</h2>
+
+        <p>Your Friendship Day surprise is waiting...</p>
+
+        <button id="openEnvelope">
+            Open 💌
+        </button>
+
+    </div>
+
+</div>
+<!-- Main Welcome Screen -->
+<div id="welcomeScreen" class="screen">
 
     <div class="card">
 
         <div class="emoji">
-            💌
+            🌸
         </div>
 
-        <h1 id="title">
+        <h1>
             Hey Sejal...
         </h1>
 
-        <p id="subtitle">
+        <p class="subtitle">
             Happy Friendship Day ❤️
         </p>
 
-        <p id="message">
-            I made something special just for you.
+        <p class="message">
+            I wanted to make something different instead of sending
+            just another text message...
+            <br><br>
+            So I made this little surprise only for you. ✨
         </p>
 
-        <button id="openBtn">
-            Open My Surprise ✨
+        <button id="startJourney">
+            Start Journey 🌷
         </button>
 
     </div>
 
 </div>
 
+<!-- Typewriter Screen -->
+<div id="typeScreen" class="screen">
+
+    <div class="card">
+
+        <h2>
+            Before we continue...
+        </h2>
+
+        <p id="typingText"></p>
+
+        <button id="continueBtn">
+            Continue ❤️
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Question Screen -->
+<div id="questionScreen" class="screen">
+
+    <div class="card">
+
+        <h2>
+            One Question 😄
+        </h2>
+
+        <p>
+            Will you always remain my best friend?
+        </p>
+
+        <div class="buttons">
+
+            <button id="yesBtn">
+                Yes ❤️
+            </button>
+
+            <button id="noBtn">
+                No 🙈
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Letter Screen -->
+<div id="letterScreen" class="screen">
+
+    <div class="letter">
+
+        <h2>
+            💌 A Letter For You
+        </h2>
+
+        <div class="letterContent">
+
+            <p>
+
+Dear Sejal,
+
+Happy Friendship Day ❤️
+
+Thank you for being such an amazing friend.
+
+Even if we don't meet every day,
+I'm really grateful that you're a part of my life.
+
+I hope you keep smiling,
+keep achieving everything you dream of,
+and never change the wonderful person you are.
+
+No matter what happens,
+our friendship will always stay special.
+
+✨
+
+— Yash
+
+            </p>
+
+        </div>
+
+        <button id="finalBtn">
+            One Last Thing 🌸
+        </button>
+
+    </div>
+
+</div>
+<!-- Final Screen -->
+<div id="finalScreen" class="screen">
+
+    <div class="card finalCard">
+
+        <div class="emoji">
+            🥹💖
+        </div>
+
+        <h1>
+            Happy Friendship Day, Sejal!
+        </h1>
+
+        <p class="message">
+
+            I don't know what the future holds...
+
+            <br><br>
+
+            But I'm really happy that our paths crossed.
+
+            <br><br>
+
+            Thanks for all the laughs,
+            the memories,
+            and for simply being you.
+
+            <br><br>
+
+            Stay happy.
+            Stay crazy.
+            Stay awesome.
+
+            🌸❤️🌸
+
+        </p>
+
+        <h2 class="signature">
+            — Your Friend,
+            <br>
+            <span>Yash ❤️</span>
+        </h2>
+
+        <button id="celebrateBtn">
+            Celebrate 🎉
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Music Button -->
+<button id="musicBtn" title="Music">
+    🎵
+</button>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Confetti Canvas -->
+<canvas id="confettiCanvas"></canvas>
+
+<!-- GSAP -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
+<!-- Canvas Confetti -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<!-- Main Script -->
 <script src="script.js"></script>
 
 </body>
