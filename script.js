@@ -199,7 +199,7 @@ Thank you for every laugh,
 every memory,
 and every little moment.
 
-Happy Friendship Day Sejal ❤️`;
+Happy Friendship Day Arushie ❤️`;
 
 
 
@@ -773,7 +773,7 @@ showEnding();
 
 const endingText=
 
-`Dear Sejal,
+`Dear Arushie,
 
 Thank you for being such an amazing friend.
 
@@ -785,7 +785,7 @@ Some friendships are truly special.
 
 Happy Friendship Day ❤️
 
-— Yash`;
+— Adii`;
 
 
 
@@ -828,7 +828,7 @@ showScreen("finalScreen");
 launchConfetti();
 
 
-showToast("Happy Friendship Day Sejal 💖");
+showToast("Happy Friendship Day Arushie 💖");
 
 
 };
