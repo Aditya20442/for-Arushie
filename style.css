@@ -1,5 +1,5 @@
 /* =======================================================
-   FRIENDSHIP DAY V2
+   FRIENDSHIP DAY V3
    STYLE.CSS
    PART 1 / 4
 ======================================================= */
@@ -9,80 +9,77 @@
 /* ========================= */
 
 *{
-
 margin:0;
-
 padding:0;
-
 box-sizing:border-box;
-
 }
 
 html{
-
 scroll-behavior:smooth;
-
 }
 
 body{
 
 font-family:'Poppins',sans-serif;
 
-height:100vh;
+background:linear-gradient(
+135deg,
+#ffe8f2 0%,
+#ffd9ea 25%,
+#fff6fb 55%,
+#ffe4f1 100%
+);
+
+color:#5d4a61;
 
 overflow:hidden;
 
-color:#31445d;
-
-background:
-
-linear-gradient(
-135deg,
-#dff4ff 0%,
-#fff5fb 30%,
-#ffffff 60%,
-#eaf8ff 100%
-);
+height:100vh;
 
 }
 
 /* ========================= */
-/* ANIMATED BACKGROUND */
+/* BACKGROUND */
 /* ========================= */
 
-#gradient{
+#bgGradient,
+#floatingHearts,
+#sparkles,
+#petals{
 
 position:fixed;
 
 inset:0;
 
+pointer-events:none;
+
+}
+
+#bgGradient{
+
 z-index:-20;
 
 background:
 
-radial-gradient(circle at 20% 20%,
-rgba(255,182,220,.35),
-transparent 28%),
+radial-gradient(circle at 15% 20%,
+rgba(255,182,215,.45),
+transparent 35%),
 
 radial-gradient(circle at 80% 15%,
-rgba(135,206,255,.32),
+rgba(255,220,235,.35),
 transparent 30%),
 
-radial-gradient(circle at 50% 85%,
-rgba(255,220,120,.18),
-transparent 38%),
+radial-gradient(circle at 50% 90%,
+rgba(255,240,248,.55),
+transparent 40%);
 
-radial-gradient(circle at 15% 75%,
-rgba(195,160,255,.18),
-transparent 28%);
-
-animation:bgMove 15s ease-in-out infinite;
+animation:bgFloat 15s ease-in-out infinite;
 
 }
 
-@keyframes bgMove{
+@keyframes bgFloat{
 
-0%{
+0%,100%{
 
 transform:scale(1);
 
@@ -93,33 +90,6 @@ transform:scale(1);
 transform:scale(1.08);
 
 }
-
-100%{
-
-transform:scale(1);
-
-}
-
-}
-
-/* ========================= */
-/* FLOATING LAYERS */
-/* ========================= */
-
-#particles,
-#hearts,
-#stars,
-#sparkles{
-
-position:fixed;
-
-inset:0;
-
-pointer-events:none;
-
-overflow:hidden;
-
-z-index:-5;
 
 }
 
@@ -139,11 +109,11 @@ justify-content:center;
 
 align-items:center;
 
-padding:24px;
+padding:25px;
 
 opacity:0;
 
-pointer-events:none;
+visibility:hidden;
 
 transition:.7s;
 
@@ -153,45 +123,41 @@ transition:.7s;
 
 opacity:1;
 
-pointer-events:auto;
+visibility:visible;
 
 }
 
 /* ========================= */
-/* GLASS CARD */
+/* CARD */
 /* ========================= */
 
-.glass{
+.card{
 
 width:100%;
 
-max-width:460px;
+max-width:470px;
 
-padding:42px 30px;
+padding:40px 32px;
 
-border-radius:32px;
+border-radius:30px;
 
-background:
-
-rgba(255,255,255,.42);
+background:rgba(255,255,255,.45);
 
 backdrop-filter:blur(22px);
 
-border:
-
-1px solid rgba(255,255,255,.65);
+border:1px solid rgba(255,255,255,.7);
 
 box-shadow:
 
-0 20px 60px rgba(255,170,205,.18),
+0 18px 45px rgba(255,170,205,.25),
 
-0 12px 35px rgba(130,190,255,.18);
+0 10px 28px rgba(255,190,220,.18);
 
-animation:floatCard 5s ease-in-out infinite;
+animation:cardFloat 5s ease-in-out infinite;
 
 }
 
-@keyframes floatCard{
+@keyframes cardFloat{
 
 0%,100%{
 
@@ -201,27 +167,27 @@ transform:translateY(0);
 
 50%{
 
-transform:translateY(-10px);
+transform:translateY(-8px);
 
 }
 
 }
 
 /* ========================= */
-/* HEADINGS */
+/* TEXT */
 /* ========================= */
 
 h1{
 
 font-family:'Playfair Display',serif;
 
-font-size:42px;
+font-size:40px;
 
 text-align:center;
 
-color:#3c5e9a;
+color:#ff5f98;
 
-margin-bottom:14px;
+margin-bottom:15px;
 
 }
 
@@ -229,40 +195,39 @@ h2{
 
 font-size:30px;
 
-font-weight:700;
-
 text-align:center;
 
-color:#476cb0;
+margin-bottom:16px;
 
-margin-bottom:14px;
+color:#ff6ea7;
 
 }
 
 h3{
 
-font-size:22px;
-
 text-align:center;
 
-margin-bottom:18px;
+margin-top:15px;
 
-color:#ff72a8;
+color:#ff73aa;
 
 }
 
 p{
 
-font-size:17px;
-
-line-height:31px;
-
 text-align:center;
 
-color:#56697f;
+font-size:17px;
+
+line-height:30px;
+
+color:#73576c;
+
+margin-bottom:18px;
 
 }
 /* =======================================================
+   FRIENDSHIP DAY V3
    STYLE.CSS
    PART 2 / 4
 ======================================================= */
@@ -273,37 +238,31 @@ color:#56697f;
 
 button{
 
-border:none;
-
-outline:none;
-
-cursor:pointer;
-
-font-family:'Poppins',sans-serif;
-
-font-size:17px;
-
-font-weight:600;
-
 padding:15px 34px;
+
+border:none;
 
 border-radius:999px;
 
-margin-top:25px;
+cursor:pointer;
+
+font-size:16px;
+
+font-weight:600;
+
+font-family:'Poppins',sans-serif;
 
 background:linear-gradient(
 135deg,
-#7dc8ff,
-#ff8fc5
+#ff8fbb,
+#ff6ea7
 );
 
-color:#fff;
+color:white;
 
 box-shadow:
 
-0 10px 25px rgba(125,200,255,.35),
-
-0 10px 25px rgba(255,143,197,.30);
+0 10px 25px rgba(255,120,180,.35);
 
 transition:.35s;
 
@@ -311,43 +270,36 @@ transition:.35s;
 
 button:hover{
 
-transform:
-
-translateY(-4px)
-scale(1.04);
+transform:translateY(-4px) scale(1.04);
 
 box-shadow:
 
-0 18px 40px rgba(125,200,255,.40),
-
-0 18px 40px rgba(255,143,197,.38);
+0 18px 35px rgba(255,120,180,.42);
 
 }
 
 button:active{
 
-transform:scale(.96);
+transform:scale(.97);
 
 }
 
-.choiceButtons{
+.buttonGroup{
 
 display:flex;
 
 justify-content:center;
 
-align-items:center;
-
 gap:18px;
 
 flex-wrap:wrap;
 
-margin-top:30px;
+margin-top:28px;
 
 }
 
 /* ========================= */
-/* LOADING SCREEN */
+/* LOADING */
 /* ========================= */
 
 .loadingCard{
@@ -356,52 +308,75 @@ text-align:center;
 
 }
 
-.loadingIcon{
+.logo{
 
-font-size:64px;
+width:90px;
 
-animation:pulse 1.6s infinite;
+height:90px;
 
-margin-bottom:18px;
+margin:auto;
+
+margin-bottom:20px;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:42px;
+
+background:linear-gradient(
+135deg,
+#ffbdd7,
+#ffe6f1
+);
+
+box-shadow:
+
+0 12px 28px rgba(255,170,205,.30);
+
+animation:pulse 2s infinite;
 
 }
 
 .loader{
 
-margin-top:28px;
-
 width:100%;
 
 height:14px;
 
+margin-top:28px;
+
 border-radius:999px;
 
-background:#eef4fb;
+background:#ffeaf3;
 
 overflow:hidden;
 
 }
 
-.loaderBar{
-
-height:100%;
+.loaderFill{
 
 width:0;
+
+height:100%;
 
 border-radius:999px;
 
 background:linear-gradient(
 90deg,
-#7bc8ff,
-#ff95cb,
-#ffd982
+#ff8fbb,
+#ff5f98
 );
 
-animation:loadingBar 3s linear forwards;
+animation:loading 3s linear forwards;
 
 }
 
-@keyframes loadingBar{
+@keyframes loading{
 
 to{
 
@@ -421,7 +396,7 @@ transform:scale(1);
 
 50%{
 
-transform:scale(1.12);
+transform:scale(1.08);
 
 }
 
@@ -441,15 +416,15 @@ text-align:center;
 
 position:relative;
 
-width:250px;
+width:240px;
 
 height:170px;
 
-margin:35px auto;
+margin:30px auto;
 
 cursor:pointer;
 
-transition:.5s;
+transition:.4s;
 
 }
 
@@ -463,31 +438,25 @@ transform:translateY(-8px);
 
 position:absolute;
 
-width:100%;
+inset:0;
 
-height:100%;
-
-background:#ffd4e8;
+background:#ffc4dd;
 
 border-radius:18px;
 
-box-shadow:
-
-0 20px 35px rgba(0,0,0,.10);
-
 }
 
-.envelopeLetter{
+.letterInside{
 
 position:absolute;
 
 left:50%;
 
-top:22px;
+top:20px;
 
 transform:translateX(-50%);
 
-width:180px;
+width:170px;
 
 height:120px;
 
@@ -497,26 +466,27 @@ border-radius:12px;
 
 display:flex;
 
-align-items:center;
-
 justify-content:center;
+
+align-items:center;
 
 font-size:42px;
 
-transition:.45s;
+transition:.4s;
 
 box-shadow:
 
-0 10px 20px rgba(0,0,0,.08);
+0 8px 20px rgba(0,0,0,.08);
 
 }
 
-.envelope:hover .envelopeLetter{
+.envelope:hover .letterInside{
 
 transform:
 
 translateX(-50%)
-translateY(-18px);
+
+translateY(-16px);
 
 }
 
@@ -528,11 +498,11 @@ top:0;
 
 width:100%;
 
-height:95px;
+height:90px;
+
+background:#ff8fbb;
 
 clip-path:polygon(0 0,100% 0,50% 100%);
-
-background:#ff9fcf;
 
 transform-origin:top;
 
@@ -545,229 +515,167 @@ transition:.5s;
 transform:rotateX(180deg);
 
 }
-
-/* ========================= */
-/* STORY */
-/* ========================= */
-
-.storyCard{
-
-text-align:center;
-
-}
-
-#typewriterText{
-
-min-height:170px;
-
-font-size:20px;
-
-line-height:36px;
-
-font-weight:500;
-
-white-space:pre-line;
-
-}
-
-/* ========================= */
-/* WELCOME */
-/* ========================= */
-
-.welcomeCard{
-
-text-align:center;
-
-}
-
-.questionCard,
-.smileCard{
-
-text-align:center;
-
-}
 /* =======================================================
+   FRIENDSHIP DAY V3
    STYLE.CSS
    PART 3 / 4
 ======================================================= */
 
 /* ========================= */
-/* CUTE ANIMATION */
+/* CHAT */
 /* ========================= */
 
-.animationCard{
+.chatBox{
 
-text-align:center;
+max-height:360px;
 
-}
+overflow-y:auto;
 
-.cuteScene{
+padding:10px;
 
 display:flex;
 
-justify-content:space-evenly;
+flex-direction:column;
 
-align-items:center;
-
-margin:35px 0;
+gap:14px;
 
 }
 
-.bear{
+.chatBubble{
 
-width:120px;
+max-width:82%;
 
-height:145px;
+padding:14px 18px;
 
-background:linear-gradient(
-180deg,
-#fff8fb,
-#ffd8ea
-);
+border-radius:20px;
 
-border-radius:60px;
+font-size:15px;
 
-position:relative;
+line-height:24px;
 
-box-shadow:
-
-0 12px 30px rgba(0,0,0,.08);
-
-animation:bounce 2.8s ease-in-out infinite;
+animation:fadeUp .45s ease;
 
 }
 
-.sejalBear{
+.chatBubble.left{
 
-animation-delay:.5s;
+align-self:flex-start;
 
-}
+background:#ffffff;
 
-.ear{
+color:#666;
 
-position:absolute;
-
-width:34px;
-
-height:34px;
-
-background:#ffd8ea;
-
-border-radius:50%;
-
-top:-12px;
+box-shadow:0 8px 20px rgba(0,0,0,.06);
 
 }
 
-.ear.left{
+.chatBubble.right{
 
-left:16px;
+align-self:flex-end;
 
-}
+background:linear-gradient(135deg,#ff8fbb,#ff6ea7);
 
-.ear.right{
+color:#fff;
 
-right:16px;
-
-}
-
-.face{
-
-position:absolute;
-
-left:50%;
-
-top:36px;
-
-transform:translateX(-50%);
-
-width:84px;
-
-text-align:center;
+box-shadow:0 8px 20px rgba(255,120,180,.25);
 
 }
 
-.eyes{
+@keyframes fadeUp{
 
-width:12px;
+from{
 
-height:12px;
+opacity:0;
 
-background:#444;
-
-border-radius:50%;
-
-margin:0 auto;
-
-box-shadow:
-
--18px 0 #444,
-
-18px 0 #444;
+transform:translateY(18px);
 
 }
 
-.mouth{
+to{
 
-width:28px;
-
-height:14px;
-
-border-bottom:4px solid #ff77ad;
-
-border-radius:0 0 30px 30px;
-
-margin:18px auto 10px;
-
-}
-
-.bearName{
-
-display:block;
-
-font-weight:700;
-
-color:#4c76b8;
-
-}
-
-.middleHearts{
-
-font-size:34px;
-
-animation:heartFloat 2s infinite;
-
-}
-
-@keyframes bounce{
-
-0%,100%{
+opacity:1;
 
 transform:translateY(0);
 
 }
 
+}
+
+/* ========================= */
+/* TYPEWRITER */
+/* ========================= */
+
+.typewriter{
+
+min-height:180px;
+
+font-size:18px;
+
+line-height:34px;
+
+color:#6c5668;
+
+white-space:pre-wrap;
+
+}
+
+.cursor{
+
+display:inline-block;
+
+width:3px;
+
+height:24px;
+
+margin-left:4px;
+
+background:#ff6ea7;
+
+animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
 50%{
 
-transform:translateY(-12px);
+opacity:0;
 
 }
 
 }
 
-@keyframes heartFloat{
+/* ========================= */
+/* YES / NO */
+/* ========================= */
 
-0%,100%{
+.choiceArea{
 
-transform:scale(1);
+position:relative;
+
+height:170px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:24px;
 
 }
 
-50%{
+#yesBtn{
 
-transform:scale(1.25);
+background:linear-gradient(135deg,#7fd9a8,#58c889);
 
 }
+
+#noBtn{
+
+position:absolute;
+
+transition:.25s;
 
 }
 
@@ -775,189 +683,75 @@ transform:scale(1.25);
 /* LETTER */
 /* ========================= */
 
-.letterCard{
+.letter{
 
-text-align:center;
-
-}
-
-.letterBody{
-
-margin-top:25px;
-
-padding:28px;
+padding:26px;
 
 border-radius:22px;
 
-background:rgba(255,255,255,.58);
+background:white;
 
-box-shadow:inset 0 0 18px rgba(255,255,255,.45);
+line-height:32px;
 
-max-height:340px;
+font-size:17px;
+
+color:#6b5867;
+
+box-shadow:
+
+0 15px 30px rgba(255,170,205,.18);
+
+max-height:380px;
 
 overflow:auto;
 
 }
 
-.letterBody p{
-
-font-family:'Caveat',cursive;
-
-font-size:34px;
-
-line-height:52px;
-
-color:#445a73;
-
-text-align:left;
-
-}
-
 /* ========================= */
-/* FINGERPRINT */
+/* INPUT */
 /* ========================= */
 
-.fingerprintCard{
-
-text-align:center;
-
-}
-
-.scannerArea{
-
-display:flex;
-
-justify-content:center;
-
-margin:30px 0;
-
-}
-
-#fingerRing{
-
-position:relative;
-
-width:180px;
-
-height:180px;
-
-border-radius:50%;
-
-border:4px solid #87cfff;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-overflow:hidden;
-
-}
-
-#fingerGlow{
-
-position:absolute;
-
-inset:0;
-
-border-radius:50%;
-
-background:radial-gradient(
-
-rgba(123,200,255,.35),
-
-transparent 70%
-
-);
-
-animation:pulse 2s infinite;
-
-}
-
-#fingerprint{
-
-font-size:72px;
-
-z-index:2;
-
-}
-
-#scanProgress{
-
-position:absolute;
-
-bottom:0;
-
-left:0;
+textarea{
 
 width:100%;
 
-height:0;
+height:140px;
 
-background:rgba(120,255,180,.28);
-
-transition:height 3s linear;
-
-}
-
-#scanText{
-
-font-weight:600;
-
-color:#5d79a5;
-
-}
-/* =======================================================
-   STYLE.CSS
-   PART 4 / 4
-======================================================= */
-
-/* ========================= */
-/* CERTIFICATE */
-/* ========================= */
-
-.certificate{
-
-max-width:700px;
-
-width:100%;
-
-margin:auto;
+resize:none;
 
 padding:18px;
 
-}
+border-radius:18px;
 
-.certificateBorder{
+border:none;
 
-position:relative;
+outline:none;
 
-background:#fffdfb;
+font-family:'Poppins',sans-serif;
 
-border:10px solid #f5d38b;
+font-size:16px;
 
-border-radius:26px;
-
-padding:45px 35px;
+background:#fff;
 
 box-shadow:
 
-0 25px 60px rgba(0,0,0,.15);
+inset 0 2px 10px rgba(0,0,0,.05);
+
+margin-top:18px;
 
 }
 
-.goldTitle{
+textarea::placeholder{
 
-color:#d5a438;
-
-font-size:44px;
-
-margin:20px 0;
+color:#b9a9b3;
 
 }
 
-.certificateSeal{
+/* ========================= */
+/* SCANNER */
+/* ========================= */
+
+.scanner{
 
 width:170px;
 
@@ -973,194 +767,250 @@ justify-content:center;
 
 align-items:center;
 
-text-align:center;
+font-size:74px;
 
-font-weight:700;
+background:rgba(255,255,255,.55);
 
-color:#fff;
+border:4px solid #ff8fbb;
 
-background:linear-gradient(
-135deg,
-#ff7dbb,
-#7dc8ff
-);
+position:relative;
 
-box-shadow:
+overflow:hidden;
 
-0 15px 35px rgba(0,0,0,.18);
+cursor:pointer;
 
 }
 
-.certificateSignatures{
+.scanLine{
+
+position:absolute;
+
+left:0;
+
+width:100%;
+
+height:8px;
+
+background:#ff5f98;
+
+box-shadow:0 0 15px #ff5f98;
+
+animation:scan 2s linear infinite;
+
+}
+
+@keyframes scan{
+
+0%{
+
+top:-10px;
+
+}
+
+100%{
+
+top:100%;
+
+}
+
+}
+
+.scanText{
+
+text-align:center;
+
+margin-top:15px;
+
+font-weight:600;
+
+color:#ff5f98;
+
+}
+/* =======================================================
+   FRIENDSHIP DAY V3
+   STYLE.CSS
+   PART 4 / 4
+======================================================= */
+
+/* ========================= */
+/* CERTIFICATE */
+/* ========================= */
+
+.certificate{
+
+background:rgba(255,255,255,.92);
+
+border:3px solid #f3d48a;
+
+border-radius:28px;
+
+padding:40px 30px;
+
+text-align:center;
+
+box-shadow:
+
+0 18px 45px rgba(0,0,0,.12),
+
+0 10px 25px rgba(255,190,215,.18);
+
+}
+
+.certificate h1{
+
+font-size:42px;
+
+margin-bottom:18px;
+
+color:#d7a73c;
+
+}
+
+.certificate h2{
+
+font-size:28px;
+
+color:#ff6ea7;
+
+margin-bottom:14px;
+
+}
+
+.certificate p{
+
+font-size:18px;
+
+line-height:32px;
+
+margin-bottom:10px;
+
+}
+
+.signature{
+
+margin-top:40px;
 
 display:flex;
 
 justify-content:space-between;
 
-margin:35px 0;
+align-items:center;
 
-text-align:center;
-
-font-size:16px;
-
-}
-
-#approvedStamp{
-
-position:absolute;
-
-top:25px;
-
-right:25px;
-
-padding:12px 18px;
-
-border:4px solid #ff4d6d;
-
-color:#ff4d6d;
-
-font-weight:700;
-
-font-size:20px;
-
-transform:rotate(-15deg);
-
-border-radius:10px;
-
-opacity:.8;
-
-}
-
-.certificateTerms{
-
-margin-top:30px;
-
-text-align:left;
-
-}
-
-.certificateTerms h4{
-
-margin-bottom:12px;
-
-color:#4b70b4;
-
-}
-
-.certificateTerms ul{
-
-padding-left:22px;
-
-line-height:32px;
-
-}
-
-/* ========================= */
-/* FINAL SCREEN */
-/* ========================= */
-
-.endingCard,
-.finalCard{
-
-text-align:center;
-
-}
-
-#endingTypewriter{
-
-min-height:180px;
-
-font-size:21px;
-
-line-height:38px;
-
-white-space:pre-line;
-
-}
-
-/* ========================= */
-/* MUSIC BUTTON */
-/* ========================= */
-
-#musicBtn{
-
-position:fixed;
-
-bottom:25px;
-
-right:25px;
-
-width:65px;
-
-height:65px;
-
-padding:0;
-
-border-radius:50%;
-
-font-size:24px;
-
-z-index:999;
-
-}
-
-/* ========================= */
-/* TOAST */
-/* ========================= */
-
-#toast{
-
-position:fixed;
-
-left:50%;
-
-bottom:100px;
-
-transform:translateX(-50%);
-
-padding:14px 24px;
-
-border-radius:50px;
-
-background:rgba(255,255,255,.88);
-
-backdrop-filter:blur(15px);
-
-color:#4f6791;
+font-size:17px;
 
 font-weight:600;
 
-opacity:0;
-
-transition:.35s;
-
-pointer-events:none;
-
-box-shadow:
-
-0 10px 30px rgba(0,0,0,.12);
+color:#7b6474;
 
 }
 
-#toast.show{
+/* ========================= */
+/* FINAL MESSAGE */
+/* ========================= */
+
+.finalMessage{
+
+text-align:center;
+
+}
+
+.finalMessage h1{
+
+font-size:46px;
+
+margin-bottom:20px;
+
+}
+
+.finalMessage p{
+
+font-size:20px;
+
+line-height:36px;
+
+margin-bottom:28px;
+
+}
+
+.bigHeart{
+
+font-size:90px;
+
+display:inline-block;
+
+animation:heartBeat 1.4s infinite;
+
+}
+
+@keyframes heartBeat{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+25%{
+
+transform:scale(1.12);
+
+}
+
+50%{
+
+transform:scale(.96);
+
+}
+
+75%{
+
+transform:scale(1.15);
+
+}
+
+}
+
+/* ========================= */
+/* FLOATING ELEMENTS */
+/* ========================= */
+
+.heart,
+.sparkle,
+.petal{
+
+position:absolute;
+
+animation:floatUp linear infinite;
+
+opacity:.9;
+
+user-select:none;
+
+}
+
+@keyframes floatUp{
+
+0%{
+
+transform:translateY(120vh) rotate(0deg);
+
+opacity:0;
+
+}
+
+10%{
 
 opacity:1;
 
 }
 
-/* ========================= */
-/* CONFETTI CANVAS */
-/* ========================= */
+100%{
 
-#confettiCanvas{
+transform:translateY(-120vh) rotate(360deg);
 
-position:fixed;
+opacity:0;
 
-inset:0;
-
-pointer-events:none;
-
-z-index:9999;
+}
 
 }
 
@@ -1174,41 +1024,45 @@ width:8px;
 
 }
 
-::-webkit-scrollbar-thumb{
-
-background:#9ecfff;
-
-border-radius:999px;
-
-}
-
 ::-webkit-scrollbar-track{
 
-background:#eef7ff;
+background:#ffeaf4;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#ff9fc3;
+
+border-radius:20px;
 
 }
 
 /* ========================= */
-/* RESPONSIVE */
+/* MOBILE */
 /* ========================= */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-.glass{
+.card{
 
 padding:30px 22px;
+
+max-width:94%;
 
 }
 
 h1{
 
-font-size:34px;
+font-size:32px;
 
 }
 
 h2{
 
-font-size:26px;
+font-size:25px;
 
 }
 
@@ -1220,33 +1074,52 @@ line-height:28px;
 
 }
 
-.cuteScene{
+.buttonGroup{
 
 flex-direction:column;
 
-gap:25px;
+gap:14px;
 
 }
 
-.certificateBorder{
+button{
 
-padding:30px 20px;
+width:100%;
 
 }
 
-.goldTitle{
+.envelope{
+
+transform:scale(.9);
+
+}
+
+.certificate{
+
+padding:28px 18px;
+
+}
+
+.certificate h1{
+
+font-size:32px;
+
+}
+
+.finalMessage h1{
 
 font-size:34px;
 
 }
 
-.certificateSignatures{
+.bigHeart{
 
-flex-direction:column;
-
-gap:18px;
+font-size:72px;
 
 }
 
 }
 
+/* =======================================================
+   END OF STYLE.CSS
+======================================================= */
